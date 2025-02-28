@@ -19,7 +19,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import os
 
 SOURCE_LINK = "https://www.sse.com.cn"
-
+YOUR_DRIVER_PATH = "your_driver_path"
+FILE_NUM = None """你想要扒第一页前多少个"""
 """_summary_ 把pdflink下载到download_dir, 检查是否有重复的了，如果有了就把重复的删除
 """
 def download_pdfs(pdf_link, pdf_name, driver, download_dir):
@@ -97,7 +98,7 @@ chrome_options.add_experimental_option("prefs", prefs)
 
 # Initialize WebDriver with options
 driver = webdriver.Chrome(
-    service=Service(executable_path = "/Users/zhangziyao/Desktop/chromedriver"),#这里要改
+    service=Service(executable_path = "YOUR_DRIVER_PATH"),#这里要改
     options=chrome_options
 )
 
@@ -134,9 +135,11 @@ for pdf_link,pdf_name in all_pdf_links:
             selected = '是'
     res = pd.DataFrame([{'名称':pdf_name,'链接':pdf_link,'是否达到要求':selected,'成分':component_str}])
     final_result = pd.concat([final_result, res], ignore_index=True)
-    # tracker += 1
-    # if tracker == 3:
-    #     break
+    '''
+    tracker += 1
+    if tracker == FILE_NUM:
+        break
+    '''
     '''
     # 如果只需要头一个文件, 加个break就行
     break
