@@ -5,7 +5,7 @@ def image_to_text(download_dir,article_name,pages):
     dirname = os.path.dirname(file_path)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
-    with open(file_path+".txt","w") as f:
+    with open(file_path+".txt","w", encoding='utf-8') as f:
       ocr = CnOcr()         
       n=0
 
