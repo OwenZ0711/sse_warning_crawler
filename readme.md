@@ -10,5 +10,5 @@
 **```
   pip install requirements.txt
   python synth.py
-  ```**
+
   
