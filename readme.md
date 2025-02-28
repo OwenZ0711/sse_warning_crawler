@@ -8,7 +8,8 @@
 
 2. 运行方法
 **```
-  pip install requirements.txt
-  python synth.py
+  bash pip install -r requirements.txt
+```**
+**``` bash python synth.py```**
 
   
