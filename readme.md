@@ -13,4 +13,6 @@
 
 **```python synth.py```**
 
-  
+3. 关于chromedriver
+  chrome driver下载地址为 https://googlechromelabs.github.io/chrome-for-testing/
+  然后这个需要和当前chrome版本一致（右上角，设置，关于chrome），目前我用的133版本，如果版本不一致需要更新不然报错
