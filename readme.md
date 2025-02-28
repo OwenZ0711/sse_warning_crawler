@@ -7,8 +7,8 @@
   type_identifier.py 识别出第二句话开始到“上述行为违反了”前的最后一句话的内容，如果包含提示词直接选中，不包含的话问预训练模型进行识别
 
 2. 运行方法
-**```bash pip install -r requirements.txt```**
+**```pip install -r requirements.txt```**
 
-**``` bash python synth.py```**
+**```python synth.py```**
 
   
